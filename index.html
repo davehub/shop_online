@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boutique Dave_Store</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100">
+
+  <!-- En-tête -->
+  <header class="bg-white shadow">
+    <div class="container mx-auto p-4 flex justify-between items-center">
+      <h1 class="text-xl font-bold">Dave_Store</h1>
+      <button class="block lg:hidden p-2 bg-gray-200 rounded hover:bg-gray-300" id="menu-toggle">Menu</button>
+      <nav class="hidden lg:flex space-x-4" id="menu">
+        <ul class="flex space-x-4">
+          <li><a href="#accueil" class="text-gray-700 hover:text-blue-500">Accueil</a></li>
+          <li><a href="#produits" class="text-gray-700 hover:text-blue-500">Produits</a></li>
+          <li><a href="#contact" class="text-gray-700 hover:text-blue-500">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Section Accueil -->
+  <section id="accueil" class="container mx-auto py-8">
+    <h2 class="text-3xl font-bold mb-4 text-center">Bienvenue à Dave_Store</h2>
+    <p class="text-center text-gray-700">Découvrez nos produits les plus populaires et profitez de nos offres
+      exclusives.</p>
+  </section>
+
+  <!-- Section Produits -->
+  <main id="produits" class="container mx-auto py-8">
+    <h2 class="text-2xl font-bold mb-4 text-center">Nos Produits</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <!-- Produit 1 -->
+      <div class="bg-white p-4 rounded-lg shadow-lg product-card">
+        <img src="./images/Ordinateur Portable Dell XPS 13.jpeg" alt="Produit 1"
+          class="w-full h-48 object-cover mb-4 rounded-t-lg">
+        <h3 class="text-lg font-semibold mb-2">Ordinateur Portable Dell XPS 13</h3>
+        <p class="text-gray-700">L'ordinateur portable Dell XPS 13 allie performance et élégance dans un format compact.
+          Parfait pour les professionnels en déplacement, il offre une puissance exceptionnelle et une grande autonomie
+          pour une productivité sans interruption. Son écran Full HD aux bordures ultra-fines vous offre une expérience
+          visuelle immersive, tandis que son design léger et élégant le rend facile à transporter.</p>
+        <button class="mt-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">Acheter maintenant</button>
+      </div>
+      <!-- Produit 2 -->
+      <div class="bg-white p-4 rounded-lg shadow-lg product-card">
+        <img src="./images/Ferrino Lightent Pro 1.jpeg" alt="Produit 2"
+          class="w-full h-48 object-cover mb-4 rounded-t-lg">
+        <h3 class="text-lg font-semibold mb-2">Ferrino Lightent Pro 1</h3>
+        <p class="text-gray-700">Une tente légère et robuste, idéale pour les randonnées en solo. Elle est conçue pour
+          les trois saisons et est autoportante</p>
+        <button class="mt-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">Acheter maintenant</button>
+      </div>
+      <!-- Produit 3 -->
+      <div class="bg-white p-4 rounded-lg shadow-lg product-card">
+        <img src="./images/Seiko 5 Sports.jpeg" alt="Produit 3" class="w-full h-48 object-cover mb-4 rounded-t-lg">
+        <h3 class="text-lg font-semibold mb-2">Seiko 5 Sports</h3>
+        <p class="text-gray-700">La montre Seiko 5 Sports est une combinaison parfaite de style et de fonctionnalité.
+          Dotée d'un mouvement automatique, cette montre se recharge avec les mouvements de votre poignet.</p>
+        <button class="mt-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">Acheter maintenant</button>
+      </div>
+      <!-- Produit 4 -->
+      <div class="bg-white p-4 rounded-lg shadow-lg product-card">
+        <img src="./images/samsung s21.jpeg" alt="Produit 4" class="w-full h-48 object-cover mb-4 rounded-t-lg">
+        <h3 class="text-lg font-semibold mb-2">Smartphone Samsung Galaxy S21</h3>
+        <p class="text-gray-700">Le Samsung Galaxy S21 est un smartphone phare offrant une expérience mobile
+          exceptionnelle. Son écran Dynamic AMOLED 2X de 6.2 pouces offre des couleurs éclatantes et des noirs profonds,
+          parfait pour le visionnage de vidéos et la navigation sur le web.</p>
+        <button class="mt-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">Acheter maintenant</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Section Contact -->
+  <section id="contact" class="container mx-auto py-8">
+    <h2 class="text-2xl font-bold mb-4 text-center">Contactez-nous</h2>
+    <p class="text-center text-gray-700">Pour toute question, n'hésitez pas à nous contacter à l'adresse suivante :
+      info@boutique.com</p>
+  </section>
+
+  <!-- Pied de page -->
+  <footer class="bg-gray-800 text-white py-4">
+    <div class="container mx-auto text-center">
+      <p>&copy; 2024 Nom de la Boutique. Tous droits réservés.</p>
+      <p>
+        <a href="#" class="text-blue-400 hover:text-blue-500">Mentions légales</a> |
+        <a href="#" class="text-blue-400 hover:text-blue-500">Politique de confidentialité</a>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    // Toggle Menu for Mobile
+    document.getElementById('menu-toggle').addEventListener('click', function () {
+      var menu = document.getElementById('menu');
+      if (menu.classList.contains('hidden')) {
+        menu.classList.remove('hidden');
+        menu.classList.add('flex');
+      } else {
+        menu.classList.remove('flex');
+        menu.classList.add('hidden');
+      }
+    });
+  </script>
+</body>
+
+</html>
